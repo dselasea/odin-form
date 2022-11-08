@@ -10,10 +10,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
 .container {
   max-width: 100%;
   height: 100vh;
-  border: 1px solid red;
   display: grid;
 }
 
@@ -22,6 +26,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .signup-img-logo {
@@ -34,4 +41,30 @@
 
 h1 {
   color: white;
+}
+
+.signup-form {
+  padding: 2rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  font-weight: bold;
+}
+
+.form-control input {
+  padding: 0.5rem;
+}
+
+.signup-form .btn {
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  background-color: yellowgreen;
+  border: none;
+  margin-top: 1rem;
 }
