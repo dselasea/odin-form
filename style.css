@@ -6,23 +6,53 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background-color: #385A64;
+}
+
 .btn {
   padding: 0.8rem 1rem;
   border: 0;
   color: #fff;
   cursor: pointer;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
+  background-color: #385A64;
+  background-color: #FFC801;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .container {
+  max-width: 100%;
+  /* padding: 1rem; */
+  height: 100vh;
   /* display: flex; */
 }
 
-.info {
-  display: flex;
+.container-img {
+  background-image: url(./images/social.jpg);
+  background-size: 100% 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  object-fit:cover;
+  max-width: 100%;
+}
+
+.container-form {
+  padding: 2rem;
+  color: #fff;
+}
+
+form h2 {
+  margin-bottom: 1.5rem;
+}
+
+.form-info-heading {
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .form label {
@@ -30,5 +60,27 @@ body {
 }
 
 .form input  {
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
+  border: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 720px) {
+  .container  {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: repeat(
+      2, 1fr
+    );
+    gap: 2rem;
+  }
+
+  .form input {
+
+  }
 }
