@@ -12,8 +12,13 @@ body {
   background-color: #385A64;
 }
 
+a {
+  text-decoration: none;
+  color: #FFC801;
+}
+
 .btn {
-  padding: 0.8rem 1rem;
+  padding: 1rem 1.5rem;
   border: 0;
   color: #fff;
   cursor: pointer;
@@ -36,13 +41,35 @@ body {
   background-size: 100% 100%;
   height: 100%;
   background-repeat: no-repeat;
-  object-fit:cover;
   max-width: 100%;
+  display: none;
+  position: relative;
+}
+
+.container-img p {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.attri {
+  color: #385A64;
 }
 
 .container-form {
   padding: 2rem;
   color: #fff;
+}
+
+.container-form-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  width: 100%;
 }
 
 form h2 {
@@ -67,11 +94,21 @@ form h2 {
   border-radius: 5px;
 }
 
+.form input:focus {
+  outline: 2px solid #FFC801
+
+}
+
 @media screen and (min-width: 720px) {
   .container  {
     display: grid;
     grid-template-columns: 40% 60%;
   }
+
+  .container-img {
+    display: block;
+  }
+
   .info {
     display: grid;
     grid-template-columns: repeat(
@@ -81,6 +118,6 @@ form h2 {
   }
 
   .form input {
-
+    padding: 1.2rem 1.2rem;
   }
 }
